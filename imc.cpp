@@ -1,3 +1,5 @@
+// código para classificar um par (massa, altura) de acordo com a tabela de IMC dada no enunciado.
+
 #include <iostream>
 
 using namespace std;
@@ -11,7 +13,7 @@ float calculo_imc (float fMassa, float fAltura)
 
 int main()
 {
-    float fMassa, fAltura;
+    float fMassa, fAltura; //float pois vamos trabalhar com números de ponto flutuante (ex: altura 1.61 metros)
    
     cout << "Digite a massa (em kg): " << endl;
     cin >> fMassa;
@@ -19,8 +21,9 @@ int main()
     cin>> fAltura;
    
     float fImc = calculo_imc(fMassa, fAltura);
-    cout << "Seu IMC é de: " << fImc << endl;
-   
+    cout << "Seu IMC é de: " << fImc << endl; //retorna o IMC para o usuário
+
+    //dependendo do IMC calculado, o código retorna uma resposta específica
     if(fImc <= 17) cout << "você está muito abaixo do peso." << endl;
     else if(fImc <= 18.5) cout << "você está abaixo do peso." << endl;
     else if(fImc <= 25) cout << "você está com um peso normal." << endl;
